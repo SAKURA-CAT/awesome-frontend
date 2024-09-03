@@ -3,8 +3,10 @@
 import Mirco from "@/mirco";
 import { AppMetadata } from "qiankun";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function MircoAppClient({}) {
+  const router = useRouter();
   const register = async () => {
     const qiankun = await import("qiankun");
     // 注册微应用
@@ -29,10 +31,21 @@ export default function MircoAppClient({}) {
       console.log("异常捕获", handler);
     });
   };
+
   useEffect(() => {
     console.log("register qiankun");
     register().then();
+    window.addEventListener("popstate", handleRouteChange);
+    return () => {
+      window.removeEventListener("popstate", handleRouteChange);
+    };
   }, []);
 
-  return <div id="mirco-app"></div>;
+  const handleRouteChange = () => {
+    // 在 next11+ 下，子应用内部跳转，基座无法监听，导致点击浏览器前进、后退按钮，无法回退到正确的子应用页面
+    const { href, origin } = window.location;
+    console.log("handleRouteChange", href, origin);
+  };
+
+  return null;
 }
