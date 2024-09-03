@@ -11,9 +11,9 @@
   "dependencies": {
     "next": "14.2.7",
     "prettier": "^3.3.3",
-    "qiankun": "^2.10.16",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "wujie-react": "^1.0.22"
   },
   "devDependencies": {
     "@types/node": "^20",

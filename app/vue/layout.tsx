@@ -1,3 +1,6 @@
+"use client";
+import WujieReact from "wujie-react";
+
 export default function VueAppLayout() {
-  return <div id="vue"></div>;
+  return <WujieReact name="vueApp" url="//localhost:5173" />;
 }
