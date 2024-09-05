@@ -16,6 +16,6 @@ export default defineConfig({
     port: 3002
   },
   build: {
-    assetsDir: 'vue-mirco-app-assets'
+    assetsDir: 'vue-micro-app-assets'
   }
 })

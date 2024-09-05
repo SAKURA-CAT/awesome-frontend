@@ -3,7 +3,7 @@ const nextConfig = {
   rewrites: async () => {
     return [
       {
-        source: "/next-mirco-app/:path*",
+        source: "/next-micro-app/:path*",
         destination: "http://localhost:3001/:path*",
       },
     ];

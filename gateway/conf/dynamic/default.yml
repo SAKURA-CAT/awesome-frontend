@@ -2,10 +2,10 @@
 http:
   routers:
     vue-router:
-      rule: "PathPrefix(`/vue-mirco-app`) || PathPrefix(`/vue-mirco-app-assets`)"
+      rule: "PathPrefix(`/vue-micro-app`) || PathPrefix(`/vue-micro-app-assets`)"
       service: vue-app
     next-router:
-      rule: "!PathPrefix(`/vue-mirco-app`) && !PathPrefix(`/vue-mirco-app-assets`)"
+      rule: "!PathPrefix(`/vue-micro-app`) && !PathPrefix(`/vue-micro-app-assets`)"
       service: next-app
 
   services:
