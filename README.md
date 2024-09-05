@@ -15,7 +15,7 @@
 如果你想要启动本项目，你需要安装docker和docker-compose和nodejs 18+，然后：
 
 1. 在项目根目录下执行`npm install`安装依赖，然后执行`npm run dev`启动next.js项目
-2. 在`/micro/vue-micro-app`目录下执行`npm install`安装依赖，然后执行`npm run dev`启动vue3+vite项目
+2. 在`/micro/vue-micro-app`目录下执行`npm install`安装依赖，然后执行`npm run build`构建项目、`npm run dev`启动vue3+vite项目
 3. 在`/micro/next-micro-app`目录下执行`npm install`安装依赖，然后执行`npm run dev`启动next.js项目
 4. 在`/gateway`目录下执行`docker-compose up -d`启动traefik网关，随后，你就能在`http://localhost:8080`访问到项目了
 
