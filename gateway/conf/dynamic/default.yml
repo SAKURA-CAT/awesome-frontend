@@ -1,0 +1,19 @@
+
+http:
+  routers:
+    vue-router:
+      rule: "PathPrefix(`/vue-mirco-app`) || PathPrefix(`/vue-mirco-app-assets`)"
+      service: vue-app
+    next-router:
+      rule: "!PathPrefix(`/vue-mirco-app`) && !PathPrefix(`/vue-mirco-app-assets`)"
+      service: next-app
+
+  services:
+    vue-app:
+      loadBalancer:
+        servers:
+          - url: "http://host.docker.internal:3002/"
+    next-app:
+      loadBalancer:
+        servers:
+          - url: "http://host.docker.internal:3000/"

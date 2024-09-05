@@ -11,7 +11,11 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  server: {
+  preview: {
+    host: '0.0.0.0',
     port: 3002
+  },
+  build: {
+    assetsDir: 'vue-mirco-app-assets'
   }
 })
