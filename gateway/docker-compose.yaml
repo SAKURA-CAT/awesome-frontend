@@ -1,4 +1,4 @@
-version: '3.8'
+name: "micro_frontend"
 
 services:
   traefik:
@@ -11,3 +11,5 @@ services:
       - ./conf:/etc/traefik
     command:
       - --log.level=DEBUG
+    extra_hosts:
+      - host.docker.internal:host-gateway
