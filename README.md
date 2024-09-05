@@ -31,7 +31,7 @@
 4. [emp](https://github.com/empjs/emp)：一款企业级微前端框架，webpack联邦编译可以保证所有子应用依赖解耦
 5. [wujie](https://github.com/Tencent/wujie)：由腾讯团队开发，基于web component和iframe，相比mirco-app效果更好，并且弥补了iframe容易出现的跨域问题
 
-除了single-spa和emp，其余几个我都使用了一遍，他们或多或少都存在几个问题([#1](https://github.com/SAKURA-CAT/awesome-frontend/issues?q=sort:updated-desc+is:issue+is:closed))：
+除了single-spa和emp，其余几个我都使用了一遍，他们或多或少都存在几个问题([#1](https://github.com/SAKURA-CAT/awesome-frontend/issues/1))：
 
 1. 不支持（或者支持得不好）新的应用打包工具vite
 2. 不支持next.js11+的app模式，甚至如qiankun并不支持next.js（实际上是single-spa不支持）
