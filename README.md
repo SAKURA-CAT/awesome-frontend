@@ -7,6 +7,20 @@
 > `<iframe />`标签本质上是根据url完整渲染一个新的dom树嵌入在原本dom节点内部，因此需要很大的内存容量
 
 
+## 如何启动本项目
+
+本项目是基于后端实现网关前端微应用的一个演示项目，其中，后端网关使用traefik，前端微应用使用vue3+vite和next.js14。
+本项目作为一个演示项目，包含了一个vue3+vite的前端项目和两个next.js14的前端项目，其中，next.js作为项目基座，vue3+vite和另一个next.js作为微应用。
+
+如果你想要启动本项目，你需要安装docker和docker-compose和nodejs 18+，然后：
+
+1. 在项目根目录下执行`npm install`安装依赖，然后执行`npm run dev`启动next.js项目
+2. 在`/micro/vue-micro-app`目录下执行`npm install`安装依赖，然后执行`npm run dev`启动vue3+vite项目
+3. 在`/micro/next-micro-app`目录下执行`npm install`安装依赖，然后执行`npm run dev`启动next.js项目
+4. 在`/gateway`目录下执行`docker-compose up -d`启动traefik网关，随后，你就能在`http://localhost:8080`访问到项目了
+
+![web](./readme_files/web.png)
+
 ## 主流微前端框架介绍
 
 就目前而言，流行的微前端框架主要有：
@@ -103,5 +117,3 @@ export default nextConfig;
 ```
 
 那么对于next.js微应用而言，自然就嵌入了主应用中，并且在同一前端dom树下，所以资源（cookie等信息）共享。
-
-![web](./readme_files/web.png)
