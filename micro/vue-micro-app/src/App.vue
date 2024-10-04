@@ -1,6 +1,14 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  console.log(
+    'Micro Vue App Mounted. Received message from Micro Host:',
+    window.sessionStorage.getItem('vue')
+  )
+})
 </script>
 
 <template>
